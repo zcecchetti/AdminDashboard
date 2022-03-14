@@ -86,11 +86,15 @@ body, div {
     gap: 15px;
 }
 
-#tabs {
+.tabs {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     overflow: auto;
+}
+
+#projects .tabs {
+
     gap: 15px;
 }
 
@@ -98,6 +102,9 @@ body, div {
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    gap: 15px;
 }
 
 #trending {
@@ -116,13 +123,78 @@ body, div {
 .projectTab {
 
     height: 250px;
-    background-color: #ffffff;
     border-radius: 8px;
     padding: 24px;
     display: grid;
+    grid-template-rows: 1.5rem 1fr 1.5rem;
+    gap: 16px;
+    background: linear-gradient( 
+        to right,
+        #f0b429 10px,
+        #ffffff 10px
+    );
+}
+
+.projectTab:hover {
+
+    background: linear-gradient( 
+        to right,
+        #cb9821 10px,
+        #cdcccc 10px
+    );
+    cursor: pointer;
 }
 
 .projectText {
 
     font-size: 1rem;
+}
+
+.title {
+
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.actions {
+    display: grid;
+    justify-content: end;
+}
+
+.singleAnnouncement {
+
+    height: 1fr;
+    display: grid;
+    grid-template-rows: 1rem 1fr;
+    gap: 8px;
+    border-radius: 2px;
+    padding: 8px;
+}
+
+.singleAnnouncement:hover {
+
+    background-color: #cdcccc;
+}
+
+#announcements .tabs {
+
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 24px;
+}
+
+.aTitle {
+
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.aText {
+
+    font-size: .75rem;
+}
+
+#announcements>.tabs>div+div {
+
+    border-top: 1px solid rgb(186, 184, 184);
 }
