@@ -3,6 +3,7 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
+    font-family: helvetica, arial, sans-serif;
 }
 
 body, div {
@@ -14,9 +15,8 @@ body, div {
 #container {
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 200px calc(100vh - 200px);
-    gap: 15px;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 150px calc(100vh - 150px);
     height: 100vh;
 }
 
@@ -30,6 +30,13 @@ body, div {
 
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: clamp(100px, 10vh, 500px) clamp(100px, 30vh, 500px) clamp(100px, 20vh, 500px);
+    align-items: center;
+    justify-content: start;
+    padding: 0 24px;
+    color: #ffffff;
+    background-color: #1992d4;
 }
 
 #content {
@@ -38,8 +45,84 @@ body, div {
     grid-row: 2 / 3;
 }
 
-#container div {
+#dlogo {
 
-    background-color: blueviolet;
+    grid-row: 1 / 2;
+    font-size: 2rem;
 }
 
+#userLinks {
+
+    grid-row: 2 / 3;
+    font-size: 1.5rem;
+    display: grid;
+    gap: 16px;
+}
+
+#helpLinks {
+
+    grid-row: 3 / 4;
+    font-size: 1.5rem;
+    display: grid;
+    gap: 16px;
+}
+
+#content {
+
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding: 36px 24px;
+    background-color: #e2e8f0;
+}
+
+#projects {
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    gap: 15px;
+}
+
+#tabs {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    overflow: auto;
+    gap: 15px;
+}
+
+#announcements {
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#trending {
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#content>div {
+
+    font-size: 1.5rem;
+    display: grid;
+
+}
+
+.projectTab {
+
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+}
+
+.projectText {
+
+    font-size: 1rem;
+}
