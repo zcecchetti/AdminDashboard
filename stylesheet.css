@@ -53,6 +53,13 @@ body, div {
 
     grid-row: 1 / 2;
     font-size: 2rem;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+}
+
+#dlogo img {
+
+    height: 2rem;
 }
 
 #userLinks {
@@ -166,6 +173,8 @@ body, div {
 .actions {
     display: grid;
     justify-content: end;
+    gap: 8px;
+    grid-template-columns: 1rem 1rem 1rem;
 }
 
 .singleAnnouncement {
@@ -266,11 +275,18 @@ body, div {
     font-size: 2rem;
 }
 
+#search label {
+    display: grid;
+    justify-content: end;
+    align-items: center;
+}
+
 input {
 
     border-radius: 1rem;
     background-color: #e2e8f0;
     border: 0;
+    padding: 4px 16px;
 }
 
 #greeting {
@@ -280,15 +296,30 @@ input {
     grid-column: 1 / 2;
     grid-template-columns: 4rem 1fr;
     grid-template-rows: 1rem 3rem;
-    padding: 0 36px;
-    /* column-gap: 8px; */
+    padding: 0 36px 12px 36px;
+    column-gap: 8px;
+    align-items: center;
 }
 
 #greeting .profPic {
 
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-    font-size: 3rem;
+    height: 4rem;
+}
+
+#greeting .profPic img {
+
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+#profile .profPic img {
+
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
 #greeting .fullPerson {
@@ -340,6 +371,7 @@ button:hover {
     grid-template-columns: 1fr 2rem 1fr;
     grid-template-rows: 1fr;
     align-items: center;
+    gap: 8px;
 }
 
 #profile .notifications {
@@ -352,6 +384,9 @@ button:hover {
 #profile .profPic {
 
     grid-column: 2 / 3;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 #profile .fullPerson {
@@ -359,4 +394,17 @@ button:hover {
     grid-column: 3 / 4;
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+#userLinks div, #helpLinks div {
+
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+}
+
+.logo img {
+
+    border: 0;
+    padding: 0;
+    height: 1.5rem;
 }
